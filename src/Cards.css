@@ -1,0 +1,68 @@
+/* Base styles for card container */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+  padding: 20px;
+}
+
+/* Card styles */
+.card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-image {
+  display: flex;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 16px;
+}
+
+.card-title {
+  font-size: 18px;
+  margin: 0;
+}
+
+.card-description {
+  font-size: 14px;
+  color: #555;
+}
+
+.card-price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+}
+
+/* Responsive styles */
+@media (min-width: 1024px) {
+  .card-container {
+    grid-template-columns: repeat(4, 1fr); /* 4 cards per row on desktop */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .card-container {
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row on tablet */
+  }
+}
+
+@media (max-width: 767px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row on mobile */
+  }
+}

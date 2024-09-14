@@ -1,0 +1,12 @@
+.center-text {
+  text-align: center;
+}
+
+.container {
+  width: 400px; /* Set the maximum width */
+  margin: 0 auto; /* Center the text horizontally */
+  text-align: center; /* Center the text inside the div */
+  word-wrap: break-word; /* Ensure the text wraps correctly within the 300px */
+  /* padding: 10px; Optional: Adds some padding */
+  /* line-height: 1.5; */
+}

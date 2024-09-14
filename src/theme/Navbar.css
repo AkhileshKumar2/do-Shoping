@@ -1,0 +1,86 @@
+/* Navbar Container */
+.navbar {
+  background-color: white;
+  padding: 10px 20px;
+  /* box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25); */
+  position: relative;
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
+/* Navbar List */
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+/* Navbar Item */
+.nav-item {
+  padding: 10px;
+}
+
+/* Links Styling */
+.nav-item a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+/* Hover Effect */
+.nav-item a:hover {
+  color: #ffcc00;
+}
+
+/* Responsive Styling for Tablet */
+@media (max-width: 1024px) {
+  .nav-list {
+    justify-content: center; /* Center items for tablet view */
+  }
+}
+
+/* Responsive Styling for Mobile */
+@media (max-width: 768px) {
+  .nav-list {
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    position: absolute;
+    top: 50px; /* Adjust based on your navbar height */
+    left: 0;
+    width: 100%; /* Make sure the menu covers the full width */
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: none; /* Hidden by default, shown by menu button */
+    padding: 10px 20px; /* Add padding for better spacing */
+  }
+
+  .nav-list.show {
+    display: flex; /* Show menu when toggled */
+  }
+
+  .nav-item {
+    padding: 15px 0;
+  }
+}
+
+/* Menu Toggle Button */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: black;
+}
+
+/* Show the menu toggle button on mobile */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 20px; /* Adjust to align left */
+  }
+}
